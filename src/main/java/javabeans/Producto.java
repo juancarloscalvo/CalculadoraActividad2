@@ -1,6 +1,6 @@
 package javabeans;
 
-public class Multiplicacion {
+public class Producto {
     
 
 }
