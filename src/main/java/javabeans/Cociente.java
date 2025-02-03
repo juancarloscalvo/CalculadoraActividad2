@@ -1,5 +1,7 @@
 package javabeans;
 
+import java.util.Scanner;
+
 /**
  * Clase para las funciones de división de la calculadora
  * @author Juan Carlos Calvo Villardón
@@ -44,5 +46,35 @@ public class Cociente {
      */
     public double raiz(double numero) {
         return Math.sqrt(numero);
+    }
+
+    public void MenuDivision() {
+        Scanner entrada = new Scanner(System.in);
+        int opcion;
+        do {
+            System.out.println("1. División de reales");
+            System.out.println("2. División de enteros");
+            System.out.println("3. Inverso");
+            System.out.println("4. Raiz cuadrada");
+            System.out.println("0. Volver al menu");
+            opcion = entrada.nextInt();
+
+            switch (opcion) {
+                case 1:
+                    System.out.println("Introduce dos números reales a dividir:");
+                    System.out.println("Resultado: " + dividir(entrada.nextDouble(), entrada.nextDouble()));
+                    System.out.println("--------");
+                    break;
+                case 2:
+                    System.out.println("Introduce dos números enteros a dividir:");
+                    System.out.println("Resultado: " + dividir(entrada.nextInt(), entrada.nextInt()));
+                case 3:
+                    System.out.println("Introduce un número para obtener su inverso:");
+                    System.out.println("Resultado: " + inverso(entrada.nextDouble()));
+                case 4:
+                    System.out.println("Introduce un número para obtener su raiz cuadrada:");
+                    System.out.println("Resultado: " + raiz(entrada.nextDouble()));
+            }
+        } while (opcion != 0);
     }
 }
