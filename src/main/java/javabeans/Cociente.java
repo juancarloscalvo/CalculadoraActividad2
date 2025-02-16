@@ -4,6 +4,9 @@ import java.util.Scanner;
 
 /**
  * Clase para las funciones de división de la calculadora
+ *
+ * Se ha modificado el menú para que cada clase tenga su propio submenu de funciones.
+ *
  * @author Juan Carlos Calvo Villardón
  * @version 0.1
  */
@@ -48,6 +51,9 @@ public class Cociente {
         return Math.sqrt(numero);
     }
 
+    /**
+     * Submenu de la parte de Divisiones de la calculadora
+     */
     public void MenuDivision() {
         Scanner entrada = new Scanner(System.in);
         int opcion;
@@ -68,12 +74,18 @@ public class Cociente {
                 case 2:
                     System.out.println("Introduce dos números enteros a dividir:");
                     System.out.println("Resultado: " + dividir(entrada.nextInt(), entrada.nextInt()));
+                    System.out.println("--------");
+                    break;
                 case 3:
                     System.out.println("Introduce un número para obtener su inverso:");
                     System.out.println("Resultado: " + inverso(entrada.nextDouble()));
+                    System.out.println("--------");
+                    break;
                 case 4:
                     System.out.println("Introduce un número para obtener su raiz cuadrada:");
                     System.out.println("Resultado: " + raiz(entrada.nextDouble()));
+                    System.out.println("--------");
+                    break;
             }
         } while (opcion != 0);
     }
