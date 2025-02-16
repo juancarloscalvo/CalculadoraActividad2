@@ -12,6 +12,8 @@ import java.util.Scanner;
  * o raices negativas
  * </li>
  * </ul>
+ *
+ * URL Github: https://github.com/juancarloscalvo/CalculadoraActividad2
  * @author Juan Carlos Calvo Villardón
  * @version 0.2
  */
