@@ -14,6 +14,8 @@ public class Main {
     static Scanner entrada = new Scanner(System.in);
     static Cociente cociente = new Cociente();
     static Resta resta = new Resta();
+    static Producto producto = new Producto();
+    static Suma suma = new Suma();
 
     public static void main(String[] args) {
             int opcion;
@@ -25,13 +27,18 @@ public class Main {
                                 System.out.println("Gracias por usar la calculadora");
                                 break;
                         case 1:
+                            suma.MenuSuma();
+                            break;
+
                         case 2:
                             resta.MenuResta();
                             break;
                         case 3:
+                            producto.MenuProducto();
+                            break;
                         case 4:
-                                cociente.MenuDivision();
-                                break;
+                            cociente.MenuDivision();
+                            break;
                     }
 
             } while (opcion != 0);
