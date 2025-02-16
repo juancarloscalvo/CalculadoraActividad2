@@ -13,6 +13,7 @@ import java.util.Scanner;
 public class Main {
     static Scanner entrada = new Scanner(System.in);
     static Cociente cociente = new Cociente();
+    static Resta resta = new Resta();
 
     public static void main(String[] args) {
             int opcion;
@@ -25,6 +26,8 @@ public class Main {
                                 break;
                         case 1:
                         case 2:
+                            resta.MenuResta();
+                            break;
                         case 3:
                         case 4:
                                 cociente.MenuDivision();
