@@ -15,6 +15,7 @@ public class Main {
     static Cociente cociente = new Cociente();
     static Resta resta = new Resta();
     static Producto producto = new Producto();
+    static Suma suma = new Suma();
 
     public static void main(String[] args) {
             int opcion;
@@ -26,6 +27,8 @@ public class Main {
                                 System.out.println("Gracias por usar la calculadora");
                                 break;
                         case 1:
+                            suma.MenuSuma();
+                            break;
 
                         case 2:
                             resta.MenuResta();
