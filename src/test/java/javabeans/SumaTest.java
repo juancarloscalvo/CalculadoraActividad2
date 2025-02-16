@@ -1,48 +1,51 @@
 package javabeans;
 
-import ClaseSuma.Suma;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Clase de prueba para la clase Suma
+ * @author Angel
+ */
 class SumaTest {
 
     Suma sumaTest;
 
     @BeforeEach
-    void setUp() {
+    void setUp(){
         sumaTest = new Suma();
     }
 
     @Test
-    void testSumarDosEnteros() {
+    void testSumaEnteros() {
         // Test normal
-        assertEquals(4, sumaTest.sumar(2,2));
+        assertEquals(4, sumaTest.sumaEnteros(2,2));
         // Test con 0
-        assertEquals(5, sumaTest.sumar(5,0));
+        assertEquals(5, sumaTest.sumaEnteros(5,0));
         // Test con número negativo
-        assertEquals(-1, sumaTest.sumar(-2,1));
+        assertEquals(-1, sumaTest.sumaEnteros(-2,1));
     }
 
     @Test
-    void testSumarDosReales() {
+    void testSumaReales() {
         // Test normal
-        assertEquals(5.5, sumaTest.sumar(2.2,3.3), 0.0001);
+        assertEquals(5.5, sumaTest.sumaReales(2.2,3.3), 0.0001);
         // Test con 0
-        assertEquals(3.5, sumaTest.sumar(3.5,0), 0.0001);
+        assertEquals(3.5, sumaTest.sumaReales(3.5,0), 0.0001);
         // Test con número negativo
-        assertEquals(-1.0, sumaTest.sumar(-2.5,1.5), 0.0001);
+        assertEquals(-1.0, sumaTest.sumaReales(-2.5,1.5), 0.0001);
     }
 
     @Test
-    void testSumarTresReales() {
+    void testSumaVariosReales() {
         // Test normal
-        assertEquals(9.9, sumaTest.sumar(3.3,3.3,3.3), 0.0001);
+        assertEquals(9.9, sumaTest.sumaVariosReales(3.3,3.3,3.3), 0.0001);
         // Test con 0
-        assertEquals(4.4, sumaTest.sumar(4.4,0,0), 0.0001);
+        assertEquals(4.4, sumaTest.sumaVariosReales(4.4,0,0), 0.0001);
         // Test con número negativo
-        assertEquals(-1.2, sumaTest.sumar(-2.0,0.5,0.3), 0.0001);
+        assertEquals(-1.2, sumaTest.sumaVariosReales(-2.0,0.5,0.3), 0.0001);
     }
 
     @Test
