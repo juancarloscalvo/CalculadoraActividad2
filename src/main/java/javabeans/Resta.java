@@ -70,4 +70,7 @@ public class Resta {
     public double getAcumulado() {
         return this.acumulado;
     }
+
+    public void MenuResta() {
+    }
 }
