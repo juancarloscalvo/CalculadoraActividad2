@@ -89,9 +89,9 @@ public class Producto {
                     } catch (Exception e) {}
                 break;
             }
-        }while (opcion !=4);
-        System.out.println("**** FIN DEL PROGRAMA ***");
-        entrada.close();
+        }while (opcion !=5);
+
+
     }
 
 }
