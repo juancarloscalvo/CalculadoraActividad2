@@ -20,6 +20,9 @@ public class Cociente {
      * @return Devuelve la división del primer y segundo número real.
      */
     public double dividir(double numero1, double numero2) {
+        if (numero2 == 0)
+            throw new IllegalArgumentException("No se puede dividir por cero.");
+
         return numero1 / numero2;
     }
 
@@ -30,6 +33,8 @@ public class Cociente {
      * @return Devuelve la división del primer y segundo número real.
      */
     public int dividir(int numero1, int numero2) {
+        if (numero2 == 0)
+            throw new IllegalArgumentException("No se puede dividir por cero.");
         return numero1 / numero2;
     }
 
@@ -39,6 +44,9 @@ public class Cociente {
      * @return Devuelve el inverso del número del parametro.
      */
     public double inverso(double numero) {
+        if (numero == 0)
+            throw new IllegalArgumentException("No se puede obtener el inverso de 0");
+
         return 1 / numero;
     }
 
@@ -48,6 +56,9 @@ public class Cociente {
      * @return Devuelve la raíz cuadrada del número pasado por parametro.
      */
     public double raiz(double numero) {
+        if(numero < 0)
+            throw new IllegalArgumentException("No se puede obtener la raiz cuadrada de números negativos.");
+
         return Math.sqrt(numero);
     }
 
@@ -67,23 +78,39 @@ public class Cociente {
 
             switch (opcion) {
                 case 1:
-                    System.out.println("Introduce dos números reales a dividir:");
-                    System.out.println("Resultado: " + dividir(entrada.nextDouble(), entrada.nextDouble()));
+                    try {
+                        System.out.println("Introduce dos números reales a dividir:");
+                        System.out.println("Resultado: " + dividir(entrada.nextDouble(), entrada.nextDouble()));
+                    } catch (IllegalArgumentException e) {
+                        System.out.println("Error: " + e.getMessage());
+                    }
                     System.out.println("--------");
                     break;
                 case 2:
-                    System.out.println("Introduce dos números enteros a dividir:");
-                    System.out.println("Resultado: " + dividir(entrada.nextInt(), entrada.nextInt()));
+                    try {
+                        System.out.println("Introduce dos números enteros a dividir:");
+                        System.out.println("Resultado: " + dividir(entrada.nextInt(), entrada.nextInt()));
+                    } catch (IllegalArgumentException e) {
+                        System.out.println("Error: " + e.getMessage());
+                    }
                     System.out.println("--------");
                     break;
                 case 3:
-                    System.out.println("Introduce un número para obtener su inverso:");
-                    System.out.println("Resultado: " + inverso(entrada.nextDouble()));
+                    try {
+                        System.out.println("Introduce un número para obtener su inverso:");
+                        System.out.println("Resultado: " + inverso(entrada.nextDouble()));
+                    } catch (IllegalArgumentException e) {
+                        System.out.println("Error: " + e.getMessage());
+                    }
                     System.out.println("--------");
                     break;
                 case 4:
-                    System.out.println("Introduce un número para obtener su raiz cuadrada:");
-                    System.out.println("Resultado: " + raiz(entrada.nextDouble()));
+                    try {
+                        System.out.println("Introduce un número para obtener su raiz cuadrada:");
+                        System.out.println("Resultado: " + raiz(entrada.nextDouble()));
+                    } catch (IllegalArgumentException e) {
+                        System.out.println("Error: " + e.getMessage());
+                    }
                     System.out.println("--------");
                     break;
             }
