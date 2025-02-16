@@ -72,5 +72,51 @@ public class Resta {
     }
 
     public void MenuResta() {
+
+        int opcion;
+        do {
+            System.out.println("**** MENU DE RESTAS ***");
+            System.out.println("1. Resta de enteros");
+            System.out.println("2. Resta de reales");
+            System.out.println("3. Resta de tres números reales");
+            System.out.println("4. Resta acumulada");
+            System.out.println("5. Salir");
+            opcion = Main.entrada.nextInt();  // ✅ Usamos Main.entrada en lugar de entrada
+
+            switch (opcion) {
+                case 1:
+                    try {
+                        System.out.println("Ingresa dos números enteros para la resta: ");
+                        System.out.println("Resultado: " + restar(Main.entrada.nextInt(), Main.entrada.nextInt()));
+                    } catch (Exception e) {
+                        System.out.println("Error en la entrada.");
+                    }
+                    break;
+                case 2:
+                    try {
+                        System.out.println("Ingresa dos números reales para la resta: ");
+                        System.out.println("Resultado: " + restar(Main.entrada.nextDouble(), Main.entrada.nextDouble()));
+                    } catch (Exception e) {
+                        System.out.println("Error en la entrada.");
+                    }
+                    break;
+                case 3:
+                    try {
+                        System.out.println("Ingresa tres números reales para la resta: ");
+                        System.out.println("Resultado: " + restar(Main.entrada.nextDouble(), Main.entrada.nextDouble(), Main.entrada.nextDouble()));
+                    } catch (Exception e) {
+                        System.out.println("Error en la entrada.");
+                    }
+                    break;
+                case 4:
+                    try {
+                        System.out.println("Ingresa un número para restarlo del acumulado: ");
+                        System.out.println("Nuevo acumulado: " + restarAcumulado(Main.entrada.nextDouble()));
+                    } catch (Exception e) {
+                        System.out.println("Error en la entrada.");
+                    }
+                    break;
+            }
+        } while (opcion != 5);
     }
 }
