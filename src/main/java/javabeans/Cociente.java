@@ -14,6 +14,7 @@ import java.util.Scanner;
  * </ul>
  *
  * URL Github: https://github.com/juancarloscalvo/CalculadoraActividad2
+ * URL Perfil: https://github.com/juancarloscalvo
  * @author Juan Carlos Calvo Villardón
  * @version 0.2
  */
