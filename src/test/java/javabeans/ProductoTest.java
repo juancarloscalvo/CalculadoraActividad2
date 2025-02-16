@@ -4,12 +4,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
-/**
- * Test de la clase Producto
- * URL Github: https://github.com/juancarloscalvo/CalculadoraActividad2
- * URL Perfil: https://github.com/juancarloscalvo
- * @author Juan Carlos Calvo Villardón
- */
 class ProductoTest {
 
     Producto productoTest;
