@@ -14,6 +14,7 @@ import java.util.Scanner;
 public class Main {
     static Scanner entrada = new Scanner(System.in);
     static Cociente cociente = new Cociente();
+    static Producto producto = new Producto();
 
     public static void main(String[] args) {
             int opcion;
@@ -27,6 +28,8 @@ public class Main {
                         case 1:
                         case 2:
                         case 3:
+                                producto.MenuProducto();
+                                break;
                         case 4:
                                 cociente.MenuDivision();
                                 break;
