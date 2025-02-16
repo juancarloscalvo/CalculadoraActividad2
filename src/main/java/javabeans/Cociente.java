@@ -4,11 +4,16 @@ import java.util.Scanner;
 
 /**
  * Clase para las funciones de división de la calculadora
- *
- * Se ha modificado el menú para que cada clase tenga su propio submenu de funciones.
- *
+ * <ul>
+ * <li>Se ha modificado el menú para que cada clase tenga su
+ * propio submenu de funciones.</li>
+ * <li>Se han añadido comprobaciones de seguridad para evitar
+ * funciones con resultado inesperado como divisioens entre 0
+ * o raices negativas
+ * </li>
+ * </ul>
  * @author Juan Carlos Calvo Villardón
- * @version 0.1
+ * @version 0.2
  */
 
 public class Cociente {
