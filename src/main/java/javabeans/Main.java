@@ -7,7 +7,8 @@ import java.util.Scanner;
  * Calculadora con las siguientes operaciones:
  * Suma, Resta, Producto, Cociente
  *
- * @version 0.1
+ * @author Juan Carlos Calvo
+ * @version 0.2
  */
 
 public class Main {
